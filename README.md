@@ -1,5 +1,5 @@
 # clean-gurk
-I made this work-around to eliminate the messages and files from [gurk](https://github.com/boxdot/gurk-rs) until the feature of [Disappearing Messages](https://github.com/boxdot/gurk-rs/issues/79] is ready
+I made this work-around to eliminate the messages and files from [gurk](https://github.com/boxdot/gurk-rs) until the feature of [Disappearing Messages](https://github.com/boxdot/gurk-rs/issues/79) is ready
 
 # Installation
 
