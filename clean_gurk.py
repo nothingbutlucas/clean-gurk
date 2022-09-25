@@ -1,8 +1,9 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import os
 import sys
 import json
+import datetime
 
 # Capture user home variable
 home = os.path.expanduser("~")
@@ -16,15 +17,16 @@ with open(gurk_dir + '/gurk.data.json', 'r') as json_file:
     for message in items:
         message['messages'] = []
 
-with open(gurk_dir + '/gurk.test.json', 'w') as file:
+with open(gurk_dir + '/gurk.data.json', 'w') as file:
     json.dump(data, file)
 
 # Erase the signal-{ACTUAL_YEAR}* files on the gurk directory
 
-capture_actual_year = str(os.popen("date +%Y").read())
+year = str(datetime.datetime.now().year)
 
 for file in os.listdir(gurk_dir):
-    if file.startswith("signal-" + capture_actual_year) or file.startswith("signal-" + str(int(capture_actual_year) - 1)):
+    if file.startswith("signal-" + year) or file.startswith("signal-" + str(int(year) - 1)):
+        print("Removing file: " + file)
         os.remove(gurk_dir + "/" + file)
 
 sys.exit(0)
