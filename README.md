@@ -6,6 +6,10 @@ I made this work-around to eliminate the messages and files from [gurk](https://
 ### Bring the script to somewhere your PATH, i will use ~/.local/bin
 
     wget https://raw.githubusercontent.com/nothingbutlucas/clean-gurk/main/clean_gurk.py -P ${HOME}/.local/bin/
+    
+### Give permissions of execution to the script
+
+    chmod 744 ${HOME}/.local/bin/clean_gurk.py
 
 ### Create a crontask to execute the script every x time. I will use 1 hour.
 
