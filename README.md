@@ -3,11 +3,9 @@ I made this work-around to eliminate the messages and files from [gurk](https://
 
 # Installation
 
-    git clone https://github.com/nothingbutlucas/clean-gurk
+### Bring the script to somewhere your PATH, i will use ~/.local/bin
 
-### Copy the script to your PATH, i will use ~/.local/bin
-
-    cp clean-gurk/clean_gurk.py ${HOME}/.local/bin/
+    wget https://raw.githubusercontent.com/nothingbutlucas/clean-gurk/main/clean_gurk.py -P ${HOME}/.local/bin/
 
 ### Create a crontask to execute the script every x time. I will use 1 hour.
 
